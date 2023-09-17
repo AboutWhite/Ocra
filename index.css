@@ -1,0 +1,322 @@
+html, body {
+    height: 100%;
+    margin: 0px;
+}
+
+#wrapper{
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  align-items: stretch;
+  align-content: stretch;
+  height: 100%;
+
+}
+
+h1 {
+    margin-top: 15px;
+    font-size: 20px;
+}
+h2{
+    margin-bottom: 0px;
+    font-size: 20px;  
+}
+h3{
+    font-size: 14px;  
+    color: #374670;
+    margin:0px;
+    margin-bottom: 15px;
+}
+.hidden {
+    display: none;
+    visibility: hidden;
+}
+
+#header-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: #1B2153; /* Hintergrundfarbe des Headers, anpassen nach Bedarf */
+    padding-left: 40px;
+    padding-right: 40px;
+    z-index: 100; /* Stelle sicher, dass der Header über anderen Inhalten liegt */
+    display: flex;
+    justify-content: space-between;
+    align-items:end;
+    border-bottom: 1px solid #ddd; /* Hinzufügen einer Trennlinie unter dem Header */
+}
+
+.third {
+    flex: 1; /* Jedes Drittel nimmt den verfügbaren Platz gleichmäßig ein */  
+}
+#logo-container{
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+#mode-selection {
+    display: flex;
+}
+
+#download{
+    padding-top: 20px;
+    padding-bottom: 20px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.button{
+    font-size: 16px;
+    font-family: 'Raleway', sans-serif;
+    padding: 10px 40px;
+    cursor: pointer;
+    
+}
+.nav-button{
+    border: none; /* Entfernt die Border */
+    color: #fff; /* Textfarbe für den aktiven Button */
+    background-color: #1B2153;    
+}
+.nav-button.active {
+    font-weight: bold;
+    border-bottom: 4px solid #C1A8F5; 
+}
+
+#download-button{
+    background-color: #1B2153;   
+    color: #fff; 
+    border: 2px solid #C1A8F5; 
+    border-radius: 20px 20px 20px 20px;
+    transition: background-color 0.5s; 
+}
+#download-button:hover {
+    border: 2px solid #dccdfd;   
+}
+#download-button:active {
+    background-color: #283075;  
+}
+
+
+
+#content{
+    display: flex;
+    flex-direction: column;
+    margin-top: 0px;
+    margin-left: 0px;
+    margin-right: 0px;
+    height: 100%; /* NEW */ 
+}
+
+
+
+#verb-div{
+    display: flex;
+    flex-direction: row; 
+    height: 100%; /* NEW */
+   
+}
+/* ------------------------------------------------------------------------------Left col Verben */
+#verb-left-col{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    background-color: #F6F8FB;
+    padding-top: 150px;
+    padding-left: 40px;
+    height: 100%; /* NEW */
+    padding-right: 20px;
+  
+}
+/* inputfelder in der verb leftcol */
+.item{
+    padding: 10px;
+    margin: 0px;
+    border-style: none;
+    border-radius: 5px;   
+    font-size: 36px;
+    background-color: white;
+    border-radius: 10px;
+    width: 80%;
+    height: 30px;
+}
+.label-div{
+    display: flex;
+    flex-direction: column;
+    gap:5px;
+    font-size: 14px;
+    font-weight: bold;
+    color: grey;
+}
+label{
+    font-size: 14px;  
+    color: #374670;
+}
+#reset{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    gap:20px;
+
+}
+
+
+#clear-button{
+    display: flex;
+    align-items: center; /* Vertikal zentrieren */
+    justify-content: center; /* Horizontal zentrieren */
+    font-family: 'Raleway', sans-serif;
+    color: #E35151; /* Textfarbe für den aktiven Button */
+    border-style: solid;
+    border-width: 2px;
+    border-color: #E35151;  
+    border-radius: 5px;
+    font-size: 26px;
+    font-family: 'Raleway', sans-serif;
+    cursor: pointer;
+    background-color: #F6F8FB;
+    width: 30px;
+    height: 30px;
+}
+#clear-button:hover {
+    background-color: #F6F8FB /* Green */   
+}
+
+#clear-button:active {
+    background-color: #F6F8FB;
+    transform: translateY(2px);
+}
+
+.generate-button{
+    border: none; /* Entfernt die Border */
+    font-weight: 600;
+}
+
+/* Stil für den inaktiven Zustand */
+.generate-button[disabled] {
+    background-color: #DBDDDF; /* Hintergrundfarbe im inaktiven Zustand */
+    color: #868FA5; /* Textfarbe im inaktiven Zustand */  
+}
+
+/* Stil für den aktiven Zustand */
+.generate-button:not([disabled]) {
+    background-color: #343FB2; /* Hintergrundfarbe im aktiven Zustand */
+    color: #fff; /* Textfarbe im aktiven Zustand */
+}
+/* Stil für den aktiven Zustand */
+.generate-button:not([disabled]):hover {
+    background-color: #5E69DD; /* Neue Hintergrundfarbe im Hover-Zustand */
+    color: #fff; /* Textfarbe im Hover-Zustand */
+}
+/* Stil für den aktiven Zustand */
+.generate-button:not([disabled]):active {
+    background-color: #1E288E; /* Neue Hintergrundfarbe im Hover-Zustand */
+    color: #fff; /* Textfarbe im Hover-Zustand */
+}
+
+
+
+
+
+
+
+
+/* ------------------------------------------------------------------------------Right col Verben */
+#verb-right-col{
+    padding-top: 150px;
+    margin-left: 40px;
+    margin-right: 40px;
+}
+#verb-content{
+    display: flex;
+    flex-direction: row;
+    gap:60px;
+}
+#add-button{
+    border: none; /* Entfernt die Border */
+    font-weight: 600;
+    margin-top: 40px;
+}
+/* Stil für den inaktiven Zustand */
+#add-button[disabled] {
+    background-color: #DBDDDF; /* Hintergrundfarbe im inaktiven Zustand */
+    color: #868FA5; /* Textfarbe im inaktiven Zustand */  
+}
+
+/* Stil für den aktiven Zustand */
+#add-button:not([disabled]) {
+    background-color: #0ca778; /* Hintergrundfarbe im aktiven Zustand */
+    color: #fff; /* Textfarbe im aktiven Zustand */
+}
+/* Stil für den aktiven Zustand */
+#add-button:not([disabled]):hover {
+    background-color: #5E69DD; /* Neue Hintergrundfarbe im Hover-Zustand */
+    color: #fff; /* Textfarbe im Hover-Zustand */
+}
+/* Stil für den aktiven Zustand */
+#add-button:not([disabled]):active {
+    background-color: #1E288E; /* Neue Hintergrundfarbe im Hover-Zustand */
+    color: #fff; /* Textfarbe im Hover-Zustand */
+}
+
+/* arab label rechts */
+.label-div-arab{
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 5px;
+    font-size: 20px;
+    color: #1a90feba;
+}
+.border-input{
+    border-style:solid;
+    border-color: #E4E8EE;  
+    border-width: 1px;
+    font-size: 30px;
+    background-color: white;
+    border-radius: 10px;
+    width: 60%;
+    height: 40px;
+    text-align: right;
+    padding-right: 20px;
+   
+
+}
+#gegenwart-div{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+#vergangenheit-div{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+#imperativ-div{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+#ap-div{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+
+#spalte4{
+    display: flex;
+    flex-direction: column;
+    gap:40px;
+}
+
+
+
+
+#error-message-verb{
+    margin-top: 15px;
+    color: #E35151;
+}

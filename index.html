@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Raleway:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="index.css" />
+    <title>OCRA</title>
+</head>
+<body>
+    <div id="wrapper">
+        <div id="header-container">
+            <div class="third">
+                <div id="logo-container">
+                    <img src="./Assets/Okra_Logo.svg" alt="Mein Logo" />
+                </div>
+            </div>
+            <div class="third">
+                <div id="mode-selection">
+                    <button class="nav-button active button" id="noun-button">
+                        Nomen
+                    </button>
+                    <button class="nav-button button" id="verb-button">Verben</button>
+                </div>
+            </div>
+            <div class="third">
+                <div id="download">
+                    <button id="download-button" class="button">Downlaod</button>
+                </div>
+            </div>
+        </div>
+
+        <div id="content">
+            <div id="noun-div" class="hidden">
+                <label for="fnoun">Nomen:</label>
+                <input type="text" id="fnoun" name="fnoun" required />
+            </div>
+
+
+
+            <div id="verb-div" class="hidden">
+                <div id="verb-left-col">
+                    <div class="label-div">
+                        <label for="translation">Wort</label>
+                        <input type="text" class="item" id="translation" name="translation" required />
+                    </div>
+                    <div class="label-div">
+                        <label for="tag">Tag</label>
+                        <input type="text" class="item" id="tag" name="tag" required />
+                    </div>
+                    <div class="label-div">
+                        <label for="Vergangenheit">Vergangenheit</label>
+                        <div id="reset">
+                            <input type="text" class="item" id="Vergangenheit" name="Vergangenheit" required />
+                            <button class="clear-button" id="clear-button">
+                                <img src="./Assets/x.svg" alt="Mein Logo" />
+                            </button>
+                        </div>
+                    </div>
+                    <div>
+                        <button class="generate-button button" id="generate-button" disabled>
+                            Generieren
+                        </button>
+                        <div id="error-message-verb"></div>
+                    </div>
+                </div>
+                <div id="verb-right-col">
+                    <div id="verb-content">
+
+                        <div id="spalte1">
+                            <h3>Vergangenheit</h3>
+                            <div id="vergangenheit-div">
+                                <div class="label-div-arab">
+                                    <label for="v-ich">انا</label>
+                                    <input type="text" id="v-ich" name="v-ich" class="border-input" required />
+                                </div>
+                                <div class="label-div-arab">
+                                    <label for="v-wir">نحنا</label>
+                                    <input type="text" id="v-wir" class="border-input" name="v-wir" required />
+                                </div>
+                                <div class="label-div-arab">
+                                    <label for="v-du-m">انت</label>
+                                    <input type="text" id="v-du-m"  class="border-input" name="v-du-m" required />
+                                </div>
+                                <div class="label-div-arab">
+                                    <label for="v-du-f">انتي</label>
+                                    <input type="text" id="v-du-f"  class="border-input" name="v-du-f" required />
+                                </div>
+                                <div class="label-div-arab">
+                                    <label for="v-ihr">انتوا</label>
+                                    <input type="text" id="v-ihr" class="border-input" name="v-ihr" required />
+                                </div>
+                                <div class="label-div-arab">
+                                    <label for="v-er">هو</label>
+                                    <input type="text" id="v-er" class="border-input" name="v-er" required />
+                                </div>
+                                <div class="label-div-arab">
+                                    <label for="v-sie-f">هي</label>
+                                    <input type="text" id="v-sie-f" class="border-input" name="v-sie-f" required />
+                                </div>
+                                <div class="label-div-arab">
+                                    <label for="v-sie-pl">هن</label>
+                                    <input type="text" id="v-sie-pl" class="border-input" name="v-sie-pl" required />
+                                </div>
+                            </div>
+                            <div>
+                                <button id="add-button" class="button" disabled>Hinzufügen</button>
+                            </div>
+                        </div>
+                        <div id="spalte2">
+                            <h3>Gegenwart</h3>
+                            <div id="gegenwart-div">
+                                <div class="label-div-arab">
+                                    <label for="g-ich">انا</label>
+                                    <input type="text" id="g-ich" class="border-input" name="g-ich" required />
+                                </div>
+                                <div class="label-div-arab">
+                                    <label for="g-wir">نحنا</label>
+                                    <input type="text" id="g-wir" class="border-input" name="g-wir" required />
+                                </div>
+                                <div class="label-div-arab">
+                                    <label for="g-du-m">انت</label>
+                                    <input type="text" id="g-du-m" class="border-input" name="g-du-m" required />
+                                </div>
+                                <div class="label-div-arab">
+                                    <label for="g-du-f">انتي</label>
+                                    <input type="text" id="g-du-f" class="border-input" name="g-du-f" required />
+                                </div>
+                                <div class="label-div-arab">
+                                    <label for="g-ihr">انتوا</label>
+                                    <input type="text" id="g-ihr" class="border-input" name="g-ihr" required />
+                                </div>
+                                <div class="label-div-arab">
+                                    <label for="g-er">هو</label>
+                                    <input type="text" id="g-er"  class="border-input" name="g-er" required />
+                                </div>
+                                <div class="label-div-arab">
+                                    <label for="g-sie-f">هي</label>
+                                    <input type="text" id="g-sie-f" class="border-input" name="g-sie-f" required />
+                                </div>
+                                <div class="label-div-arab">
+                                    <label for="g-sie-pl">هن</label>
+                                    <input type="text" id="g-sie-pl" class="border-input" name="g-sie-pl" required />
+                                </div>
+                            </div>
+                        </div>
+                        <div id="spalte3">
+                            <h3>Imperativ</h3>
+                            <div id="imperativ-div">
+                                <div class="label-div-arab">
+                                    <label for="imperativ-m">انت</label>
+                                    <input type="text" id="imperativ-m" class="border-input" name="imperativ-m" required />
+                                </div>
+                                <div class="label-div-arab">
+                                    <label for="imperativ-f">انتي</label>
+                                    <input type="text" id="imperativ-f" class="border-input" name="imperativ-f" required />
+                                </div>
+                                <div class="label-div-arab">
+                                    <label for="imperativ-pl">انتوا</label>
+                                    <input type="text" id="imperativ-pl" class="border-input" name="imperativ-pl" required />
+                                </div>
+                            </div>
+                        </div>
+                        <div id="spalte4">
+                            <div>
+                                <h3>AP</h3>
+                                <div id="ap-div">
+                                    <div class="label-div-arab">
+                                        <label for="ap-m">انت</label>
+                                        <input type="text" id="ap-m" class="border-input" name="ap-m" required />
+                                    </div>
+                                    <div class="label-div-arab">
+                                        <label for="ap-f">انتي</label>
+                                        <input type="text" id="ap-f" class="border-input" name="ap-f" required />
+                                    </div>
+                                    <div class="label-div-arab">
+                                        <label for="ap-pl">انتوا</label>
+                                        <input type="text" id="ap-pl" class="border-input" name="ap-pl" required />
+                                    </div>
+                                </div>
+                            </div>
+                            <div>
+                                <h3>Passive</h3>
+                                <div id="passive-div">
+                                    <div class="label-div-arab">
+                                        <label for="passive"></label>
+                                        <input type="text" id="passive" class="border-input" name="passive" required />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div> 
+                </div>  
+            </div>
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.0/papaparse.min.js"></script>
+    <script type="module" src="./Modules/app.js"></script>
+    <script type="module" src="./Modules/dataHelper.js"></script>
+</body>
+</html>
